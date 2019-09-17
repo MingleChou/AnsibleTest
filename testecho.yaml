@@ -2,4 +2,4 @@
   remote_user: root
   tasks:
   - name: echotest
-    shell: echo test!!!
+    ping: 172.17.0.2

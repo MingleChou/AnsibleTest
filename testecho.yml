@@ -1,0 +1,5 @@
+- hosts: Allhosts
+  remote_user: root
+  tasks:
+  - name: echotest
+    echo: 'test!!!!'

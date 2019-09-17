@@ -1,4 +1,4 @@
-- hosts: Allhosts
+- hosts: mngdnode1
   remote_user: root
   tasks:
   - name: echotest

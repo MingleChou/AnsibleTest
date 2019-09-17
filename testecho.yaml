@@ -1,5 +1,4 @@
 - hosts: mngdnode1
   remote_user: root
   tasks:
-  - name: echotest
-    ping: 172.17.0.2
+  - ping:

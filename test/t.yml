@@ -1,0 +1,5 @@
+- name: Install jdk
+  hosts: Managednodes
+  remote_user: root
+  roles:
+  - jdk

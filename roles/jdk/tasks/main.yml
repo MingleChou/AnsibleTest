@@ -1,14 +1,14 @@
 - name: Copy jdk pack
-  copy: src=jdk.tar dest={{ snc_home_path }} owner=root group=root  mode='0755' force=no
+  copy: src=jdk.tar dest=/home/ owner=root group=root  mode='0755' force=no
 
 - name: Unzip jdk pack
-  unarchive: src={{ snc_home_path }}/jdk.tar dest={{ snc_home_path }} owner=root group=root  mode='0755' creates={{ snc_home_path }}/jdk remote_src=yes
+  unarchive: src=/home/jdk.tar dest=/home/ owner=root group=root  mode='0755' creates=/home/jdk remote_src=yes
 
 - name: Set jdk env
-  template: src=java.sh.j2 dest={{ snc_home_path }}/java.sh owner=root group=root  mode='0755'
+  template: src=java.sh.j2 dest=/home/java.sh owner=root group=root  mode='0755'
 
 - name: Source bash_profile
-  shell: "sh {{snc_home_path}}/java.sh"
+  shell: "sh /home/java.sh"
   register: java_version
   tags: t3
 

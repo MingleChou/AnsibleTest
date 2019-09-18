@@ -1,0 +1,14 @@
+#!/bin/sh
+
+echo "
+export JAVA_HOME={{ snc_home_path }}/jdk
+export PATH=\$JAVA_HOME/bin:$PATH 
+export CLASSPATH=.:\$JAVA_HOME/lib/dt.jar:\$JAVA_HOME/lib/tools.jar
+">>/home/{{os_general_user}}/.bashrc
+
+rm -rf {{snc_home_path}}/jdk.tar
+
+source /home/{{os_general_user}}/.bash_profile
+source /home/{{os_general_user}}/.bashrc
+
+java -version 2>&1

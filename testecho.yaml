@@ -1,4 +1,4 @@
-- hosts: mngdnode1
+- hosts: Managednodes
   remote_user: root
   tasks:
   - ping:

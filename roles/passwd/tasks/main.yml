@@ -1,1 +1,8 @@
+- name: unlock shadow file
+  shell: chattr -i /etc/shadow
 
+- name:  change passwords
+  shell: echo '1qaz@WSX' | passwd --stdin root
+  
+- name: lock shadow file
+  shell: chattr +i /etc/shadow
